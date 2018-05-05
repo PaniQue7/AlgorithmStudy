@@ -1,6 +1,6 @@
 #include <iostream>
 #include <algorithm>
-// 
+
 using namespace std;
 int num;
 int input[10000];
