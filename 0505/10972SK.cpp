@@ -1,6 +1,6 @@
 #include <iostream>
 #include <algorithm>
-
+// 
 using namespace std;
 int num;
 int input[10000];
@@ -19,7 +19,7 @@ int isLast()
 
 void sssort(int start, int val, int least)
 {
-	//startÀÎµ¦½ººÎÅÍ num-1ÀÎµ¦½º±îÁö... val+1°ªÀ» val·Î ¹Ù²Ù°í ¼ÒÆ® ÁøÇà
+	//startì¸ë±ìŠ¤ë¶€í„° num-1ì¸ë±ìŠ¤ê¹Œì§€... val+1ê°’ì„ valë¡œ ë°”ê¾¸ê³  ì†ŒíŠ¸ ì§„í–‰
 	for (int i = start; i <= num - 1; i++)
 	{
 		if (input[i] == least)
@@ -83,12 +83,12 @@ int main(void)
 		}
 		else
 		{
-			//index + 1ÀÇ À§Ä¡ÀÇ °ª¿¡ ±× ³ª¸ÓÁö Áß¿¡ °¡Àå ÀÛÀº °ªÀ¸·Î º¯°æÇÏ°í, ±âÁ¸ index+1ÀÇ °ª°ú ±× µÚÀÇ °ªµéÀ» ¿À¸§Â÷¼øÀ¸·Î Á¤·ÄÇÑ´Ù
+			//index + 1ì˜ ìœ„ì¹˜ì˜ ê°’ì— ê·¸ ë‚˜ë¨¸ì§€ ì¤‘ì— ê°€ì¥ ì‘ì€ ê°’ìœ¼ë¡œ ë³€ê²½í•˜ê³ , ê¸°ì¡´ index+1ì˜ ê°’ê³¼ ê·¸ ë’¤ì˜ ê°’ë“¤ì„ ì˜¤ë¦„ì°¨ìˆœìœ¼ë¡œ ì •ë ¬í•œë‹¤
 			int temp = input[index];
 			//
 			if (!isIn(input[index]+1, index+1))
 			{
-				//input[index]º¸´Ù Å« °ªµé Áß¿¡¼­ÀÇ min
+				//input[index]ë³´ë‹¤ í° ê°’ë“¤ ì¤‘ì—ì„œì˜ min
 
 				input[index] = getLeast(index + 1, input[index]);
 				sssort(index + 1, temp, input[index]);
