@@ -15,7 +15,7 @@ int main(void)
 
 	vector<long double> lb(19,1-(pb/100));
 	
-	vector<long double> t(19,1);
+	vector<long double> t(19,1); //팩토리얼 계산
 
 	for(int i=2; i<19; i++)
 	{
@@ -31,11 +31,13 @@ int main(void)
 	}
 
 
-
+	//소수인 경우
+	
 	b[2]=0;
 	b[3]=0;
 	b[5]=0;
 	b[7]=0;
+	b[11]=0;
 	b[13]=0;
 	b[17]=0;
 
@@ -43,6 +45,7 @@ int main(void)
 	a[3]=0;
 	a[5]=0;
 	a[7]=0;
+	a[11]=0;
 	a[13]=0;
 	a[17]=0;
 	
@@ -56,7 +59,6 @@ int main(void)
 
 	for(int i=0; i<19; i++)
 	{
-		cout << "a["<<i<<"] : " << a[i]<<endl;
 		
 		suma += la[18-i]*(t[18]/(t[18-i]*t[i]))*a[i];
 		
