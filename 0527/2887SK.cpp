@@ -92,7 +92,7 @@ int main()
 	}
 
 	// x에 대해 오름차순 정렬
-	saort(planet.begin(), planet.end(), compareX);
+	sort(planet.begin(), planet.end(), compareX);
 	for (int i = 0; i < planet.size() - 1; i++)
 		edge.push_back(Edge(planet.at(i).planetNum, planet.at(i + 1).planetNum, abs(planet.at(i).x - planet.at(i + 1).x)));
 
